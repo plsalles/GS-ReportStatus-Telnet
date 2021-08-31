@@ -1,0 +1,5 @@
+mac_address,serial_number,endpoint_name,endpoint_type,owner_id,endpoint_group,reg.1.address,reg.1.auth.password,reg.1.auth.userid,reg.1.displayname,reg.2.address,reg.2.displayname,reg.3.address,device.logincred.user,mr.pair.uid.1,device.hostname.set,device.hostname,device.logincred.password.set,device.set,device.logincred.user.set,device.logincred.password,reg.1.label,system.name
+64167F298259,64167f298259,MUNORTH-RM235-Black Hills,RealPresence Trio,,PROD Trio 5.9.4 AA VPlus Zoom,MUNORTH-RM235@micron.com,,,,z.MUNORTH-RM235,,p.MUNORTH-RM235,MUNORTH-RM235@micron.com,0004f2fffab7,1,BOIMUN235TR,1,1,1,ConfRoomTrio8800,,MUNORTH-RM235-Black Hills
+0004F2FE5FDC,0004f2fe5fdc,TRIO-PSALLES,RealPresence Trio,,TRIO_Devices,TRIO_PSALLES@plsalles.com.br,,,,z.TRIO-PSALLES,z.TRIO-PSALLES,,TRIO-PSALLES@plsalles.com.br,,1,,1,1,1,ConfRoomTrio8800,,TRIO-PSALLES
+4825670D6782,4825670d6782,17819394888,Polycom Phone,Woburn-Lobby Desk,,17819394888,147258369,17819394888,17819394888,,,,,,,,,,,,4888,
+00E0DB5079EA,8l20135079eafc,x30-PauloSalles,G Series,PSALLES/paulo.salles,,,,,,,,,,,,,,,,,,

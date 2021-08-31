@@ -1,0 +1,60 @@
+Calling Thu Aug 05 2021 17:16:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:16:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:16:44 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:17:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:17:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:17:44 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:18:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:18:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:18:44 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:19:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:19:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:19:44 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:20:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:20:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:20:44 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:21:04 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Thu Aug 05 2021 17:21:24 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:49:30 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:49:50 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:50:10 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:50:30 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:50:50 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:51:10 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:51:30 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:51:50 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:52:10 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:52:30 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:52:50 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:53:10 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
+Calling Fri Aug 06 2021 19:53:30 GMT-0300 (Brasilia Standard Time)	GroupServer1	192.168.1.133	dialing manual	inacall online	hanging up all
+
