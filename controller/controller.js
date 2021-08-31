@@ -3,6 +3,7 @@ const Telnet = require('telnet-client')
 let regexInCall = /inacall online/;
 
 
+
 async function call(data, report) {
     let connection = new Telnet()
   
