@@ -15,12 +15,13 @@ class Call {
     this.name = name;
     this.ip = ip;
     this.password = password;
+    this.state = "disconnected";
   }
   async call() {
+    console.log("Chamando")
     let connection = new Telnet()
 
     // these parameters are just examples and most probably won't work for your use-case.
-    console.log(this.name, this.ip, this.password)
     let params = {
       host: this.ip,
       port: 24,
@@ -34,7 +35,8 @@ class Call {
       await connection.connect(params)
       console.log(`Connected to the GS Endpoint IP: ${this.ip} Name: ${this.name}`)
     } catch (error) {
-      console.log(error);
+      console.log(error)
+      return error
     }
 
 
@@ -44,15 +46,14 @@ class Call {
     let regexInCall = /inacall online/;
 
     res = await connection.send('dial manual 1024 888888.1120324757@t.plcm.vc h323');
-    console.log(res)
     report += `\t${res.replace(/\r?\n|\r/g, "")}`;
 
     setTimeout(async function () {
       let res = await connection.send('status');
 
-      console.log(res);
       if (regexInCall.test(res)) {
         report += `\tinacall online`;
+        this.state = "connected";
         await connection.end();
         return `GS Endpoint IP: ${this.ip} Name: ${this.name} is connected`
         await connection.end();
@@ -68,7 +69,6 @@ class Call {
     let connection = new Telnet()
 
     // these parameters are just examples and most probably won't work for your use-case.
-    console.log(this.name, this.ip, this.password)
     let params = {
       host: this.ip,
       port: 24,
@@ -77,42 +77,92 @@ class Call {
       shellPrompt: '-> ', // or negotiationMandatory: false
       timeout: 50000
     }
-    console.log(params)
     try {
       await connection.connect(params)
-      console.log(`Connected to the GS Endpoint IP: ${this.ip} Name: ${this.name} - Disconenct Method`)
     } catch (error) {
-      console.log(error);
+      return error;
     }
-
-    return await connection.send('hangup all');
+    if (this.state = "connected") this.state = "disconnected"
+    let res = await connection.send('hangup all');
+    console.log(`Connected to the GS Endpoint IP: ${this.ip} Name: ${this.name} - Call is disconnected`)
     await connection.end();
+    return res;
+
   }
 }
 
-// fs.readFile('/mnt/d/Repo/GS-ReportStatus-Telnet/GroupSeriesList.txt', 'utf8' , (err, data) => {
-
-//   if (err) {
-//     console.error(err)
-//     return
-//   }
-//   arr.push(data);
-//   console.log(data.split('\n'))
-//   arr = data.split('\n').map( (e) => {
-//     return e.split(',');
-//   })
-//   console.log(arr)
-// })
-
 console.log("GSDialer initialized");
 
-let newCall = new Call("GS-500", "192.168.1.133", "5712")
-console.log(newCall)
-newCall.call();
+console.log("Reading CSV file")
+const { promises: { readFile } } = require("fs");
 
-setTimeout(async function () {
-  newCall.disconnect();
-}, 15000);
+readFile("/mnt/d/Repo/GS-ReportStatus-Telnet/GroupSeriesList.txt").then(fileBuffer => {
+  console.log(fileBuffer.toString());
+
+  // Split data into lines and separate headers from actual data
+  // using Array spread operator
+  const [headerLine, ...lines] = fileBuffer.toString().split('\r\n');
+
+  // Split headers line into an array
+  // `valueSeparator` may come from some kind of argument
+  // You may want to transform header strings into something more
+  // usable, like `camelCase` or `lowercase-space-to-dash`
+  const valueSeparator = ',';
+  const headers = headerLine.split(valueSeparator);
+  // Create objects from parsing lines
+  // There will be as much objects as lines
+  const objects = lines
+    .map((line, index) =>
+      line
+        // Split line with value separators
+        .split(valueSeparator)
+
+        // Reduce values array into an object like: { [header]: value }
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+        .reduce(
+
+          // Reducer callback 
+          (object, value, index) => ({
+            ...object,
+            [headers[index]]: value,
+          }),
+
+          // Initial value (empty JS object)
+          {}
+        )
+    );
+  console.log(objects)
+  let dialer = 3;
+  for (let i=0; i<dialer; i++ ) {
+    console.log(objects[i])
+    let newCall = new Call(objects[i].endpoint_name, objects[i].ip_address, objects[i].password)
+    console.log(newCall)
+    let resCall = newCall.call();
+    console.log("Retorno res",resCall)
+
+    console.log(resCall.toString().indexOf('Error:'))
+    if(resCall.toString().indexOf('Error:') === -1) {
+      setTimeout(async function () {
+        console.log("entrou setTimeout")
+        let resDisconnect = newCall.disconnect();
+        console.log(resDisconnect)
+      }, 15000);
+    }
+    console.log("Call number ",i)
+  }
+  
+}).catch(error => {
+  console.error(error.message);
+  process.exit(1);
+});
+
+
+
+
+
+
+
+
 
 // async function call(data) {
 //   let connection = new Telnet()
@@ -246,4 +296,23 @@ setTimeout(async function () {
   // ->
 
 
+
+// function readFile(arr) {
+
+//   fs.readFile('/mnt/d/Repo/GS-ReportStatus-Telnet/GroupSeriesList.txt', 'utf8', (err, data) => {
+
+//     if (err) {
+//       console.error(err)
+//       return
+//     }
+//     arr.push(data);
+//     console.log(data.split('\n'))
+//     arr = data.split('\n').map((e) => {
+//       return e.split(',');
+//     })
+//     console.log(arr)
+//   })
+
+//   return arr;
+// }
 
