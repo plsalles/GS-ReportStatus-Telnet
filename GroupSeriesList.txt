@@ -1,4 +1,8 @@
 endpoint_name,ip_address,user,password
-GroupServer1,192.168.1.133,admin,5712
-GroupServer2,192.168.1.134,admin,5712
+GroupServer1,192.168.1.131,admin,5712
+GroupServer2,192.168.1.132,admin,5712
 GroupServer3,192.168.1.161,admin,5712
+GroupServer4,192.168.1.134,admin,5712
+GroupServer5,192.168.1.135,admin,5712
+GroupServer6,192.168.1.136,admin,5712
+GroupServer7,192.168.1.137,admin,5712
